@@ -37,15 +37,14 @@ const services = [
     ],
   },
 ];
-
-export default () => {
-  function getLines(description){
+const Work = () => {
+  function getLines(description) {
     const linhas = description.split("\n");
     return linhas.map((linha, index) => (
       <p key={index} className="text-justify">
         {linha}
       </p>
-    ))
+    ));
   }
 
   return (
@@ -88,7 +87,9 @@ export default () => {
                   </div>
                   {/* description */}
                   <ScrollArea className="h-[190px]">
-                    <p className="font-light">{getLines(service.description)}</p>
+                    <p className="font-light">
+                      {getLines(service.description)}
+                    </p>
                   </ScrollArea>
                   {/* border */}
                   <div className="border-b border-white/20 w-full"></div>
@@ -115,3 +116,5 @@ export default () => {
     </section>
   );
 };
+
+export default Work;
