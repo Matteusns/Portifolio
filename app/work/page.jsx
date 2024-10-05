@@ -15,7 +15,7 @@ const services = [
     image: "/assets/work/portifolio.png",
     description:
       "Um portfólio a fim de demonstrar não apenas os projetos que já desenvolvi, mas também minha capacidade de criar uma experiência de usuário atrativa e funcional.",
-    repo: "",
+    repo: "https://github.com/Matteusns/Portifolio",
     tags: [
       { name: "Next.js", color: "bg-green-600" },
       { name: "JavaScript", color: "bg-yellow-500" },
@@ -27,7 +27,7 @@ const services = [
     image: "/assets/work/AppCondutor.png",
     description:
       "Aplicativo em React Native para uma empresa, com a finalidade de gerenciar Ordens de Serviço.\nO aplicativo permite receber novas solicitações de serviço e acompanhar o progresso, atualizando os status necessários ao longo do processo, proporcionando mais eficiência e controle no gerenciamento dos serviços.",
-    repo: "",
+    repo: "https://github.com/BluemapOficial/rnAppCondutor",
     tags: [
       { name: "React Native", color: "bg-green-600" },
       { name: "Expo", color: "bg-blue-600" },
@@ -87,21 +87,21 @@ const Work = () => {
                   </div>
                   {/* description */}
                   <ScrollArea className="h-[190px]">
-                    <p className="font-light">
+                    <div className="font-light">
                       {getLines(service.description)}
-                    </p>
+                    </div>
                   </ScrollArea>
                   {/* border */}
                   <div className="border-b border-white/20 w-full"></div>
                   {/* buttons */}
                   <div className="flex justify-between">
-                    <Link href={service.repo}>
+                    {/* <Link href={service.repo}>
                       <Button>
                         <FaPlusCircle className="mr-2" />
                         Ver mais
                       </Button>
-                    </Link>
-                    <Link href={"/"}>
+                    </Link> */}
+                    <Link target="_blank" href={service.repo}>
                       <Button>
                         <FaGithub className="mr-2" /> Repositório
                       </Button>
