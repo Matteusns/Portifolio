@@ -36,7 +36,19 @@ const services = [
       { name: "JavaScript", color: "bg-yellow-500" },
     ],
   },
+  {
+    title: "Monster Roledex",
+    image: "/assets/work/monsters.png",
+    description:
+      "Projeto desenvolvido em TypeScript com o objetivo de aprofundar o conhecimento na linguagem e explorar suas principais funcionalidades. Esta aplicação simula uma busca de informações e imagens fictícias, exibindo os resultados de forma dinâmica na interface. Inclui também um sistema de filtros, permitindo refinar a visualização dos dados em tela de acordo com critérios específicos definidos pelo usuário.",
+    repo: "https://github.com/Matteusns/monsters-ts",
+    tags: [
+      { name: "React", color: "bg-green-600" },
+      { name: "TypeScript", color: "bg-yellow-500" },
+    ],
+  },
 ];
+
 const Work = () => {
   function getLines(description) {
     const linhas = description.split("\n");
